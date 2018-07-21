@@ -38,38 +38,36 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
 
    
-    var recgonize = " "
+    var recgonize = String()
     
     
-    func captureOutput(_ output: AVCaptureOutput, didOutput: CMSampleBuffer, from: AVCaptureConnection)
-        {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)
+    {
+        guard let model = try? VNCoreMLModel(for: Bird().model) else {return}
+        
+        let request = VNCoreMLRequest(model: model)
+        { (finishedRequest, error) in
             
-            guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(didOutput) else
-            {return}
+        guard let results = finishedRequest.results as? [VNClassificationObservation] else {return}
+        guard let Observation = results.first else {return}
             
-            guard let model = try? VNCoreMLModel(for: Bird().model)else{return}
-            
-            let request = VNCoreMLRequest(model: model)
-                { (fin, err) in
-                    //print(finish.results)
-                    
-                    guard let results = fin.results as?[VNClassificationObservation] else{return}
-                    guard let firstObservation = results.first else{return}
-                    
-                    self.recgonize = firstObservation.identifier
-                    
-                    print(firstObservation.identifier)
-                    
-                }
-            try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+        DispatchQueue.main.async(execute: {
+                self.recgonize = Observation.identifier
+        })
+
         }
+        
+        
+        guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {return}
+        
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+        
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let secondView = segue.destination as! SecondViewController
         secondView.classify = recgonize
     }
-    
-
-
 }
