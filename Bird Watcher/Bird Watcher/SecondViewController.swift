@@ -16,6 +16,8 @@ class SecondViewController: UIViewController
    
     var classify = String()
     
+    //include a machine learning semantics api or usi a data base to display info
+    
     @IBOutlet weak var birdImage: UIImageView!
     
     override func viewDidLoad()
@@ -25,7 +27,7 @@ class SecondViewController: UIViewController
         // Do any additional setup after loading the view.
         labelName.text = classify
 
-        checkOut(name: classify)
+       checkClassification(name: classify)
     }
 
     override func didReceiveMemoryWarning()
@@ -34,7 +36,7 @@ class SecondViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    func checkOut(name: String)
+   func checkClassification(name: String)
     {
         birdImage.image = UIImage(named: name)
     }
