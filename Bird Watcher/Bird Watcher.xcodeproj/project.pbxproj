@@ -13,7 +13,7 @@
 		D15265BD20D633080074F608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15265BB20D633080074F608 /* Main.storyboard */; };
 		D15265BF20D6330B0074F608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D15265BE20D6330B0074F608 /* Assets.xcassets */; };
 		D15265C220D6330B0074F608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15265C020D6330B0074F608 /* LaunchScreen.storyboard */; };
-		D19DA10420FD50810045D984 /* Bird.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D19DA10320FD50810045D984 /* Bird.mlmodel */; };
+		D1F53D9C2103E167009FFBD8 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D1F53D9B2103E167009FFBD8 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		D15265BE20D6330B0074F608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D15265C120D6330B0074F608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D15265C320D6330B0074F608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D19DA10320FD50810045D984 /* Bird.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Bird.mlmodel; sourceTree = "<group>"; };
+		D1F53D9B2103E167009FFBD8 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		D15265B620D633080074F608 /* Bird Watcher */ = {
 			isa = PBXGroup;
 			children = (
-				D19DA10320FD50810045D984 /* Bird.mlmodel */,
+				D1F53D9B2103E167009FFBD8 /* Resnet50.mlmodel */,
 				D15265B720D633080074F608 /* AppDelegate.swift */,
 				D15265B920D633080074F608 /* ViewController.swift */,
 				D14366F220F8B5D7001D6E5A /* SecondViewController.swift */,
@@ -141,8 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F53D9C2103E167009FFBD8 /* Resnet50.mlmodel in Sources */,
 				D14366F320F8B5D7001D6E5A /* SecondViewController.swift in Sources */,
-				D19DA10420FD50810045D984 /* Bird.mlmodel in Sources */,
 				D15265BA20D633080074F608 /* ViewController.swift in Sources */,
 				D15265B820D633080074F608 /* AppDelegate.swift in Sources */,
 			);

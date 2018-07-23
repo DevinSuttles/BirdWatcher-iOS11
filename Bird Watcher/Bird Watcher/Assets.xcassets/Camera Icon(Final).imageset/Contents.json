@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Camera Icon(Final).png",
+      "filename" : "Camera Icon(Final)1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Camera Icon(Final)2x.png",
       "scale" : "2x"
     },
     {

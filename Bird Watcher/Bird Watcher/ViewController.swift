@@ -13,6 +13,8 @@ import Vision
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate
 {
     
+
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -29,7 +31,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let dataOutput = AVCaptureVideoDataOutput()
         dataOutput.setSampleBufferDelegate(self,queue: DispatchQueue(label: "videoQueue"))
         captureSession.addOutput(dataOutput)
+    
+    
     }
+
     
     override func didReceiveMemoryWarning()
     {
@@ -43,7 +48,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)
     {
-        guard let model = try? VNCoreMLModel(for: Bird().model) else {return}
+        guard let model = try? VNCoreMLModel(for: Resnet50().model) else {return}
         
         let request = VNCoreMLRequest(model: model)
         { (finishedRequest, error) in
