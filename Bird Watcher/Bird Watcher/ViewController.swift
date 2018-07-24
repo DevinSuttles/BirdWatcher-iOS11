@@ -13,7 +13,8 @@ import Vision
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate
 {
     
-
+    @IBOutlet weak var bottomView: UIView!
+  
     
     override func viewDidLoad()
     {
@@ -32,7 +33,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         dataOutput.setSampleBufferDelegate(self,queue: DispatchQueue(label: "videoQueue"))
         captureSession.addOutput(dataOutput)
     
-    
+        //bring camera button to subview
+        view.bringSubview(toFront: bottomView)
     }
 
     
@@ -45,29 +47,29 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
    
     var recgonize = String()
     
-    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)
     {
         guard let model = try? VNCoreMLModel(for: Resnet50().model) else {return}
-        
+            
         let request = VNCoreMLRequest(model: model)
         { (finishedRequest, error) in
-            
-        guard let results = finishedRequest.results as? [VNClassificationObservation] else {return}
-        guard let Observation = results.first else {return}
-            
-        DispatchQueue.main.async(execute: {
-                self.recgonize = Observation.identifier
-        })
-
+                
+                guard let results = finishedRequest.results as? [VNClassificationObservation] else {return}
+                guard let Observation = results.first else {return}
+                
+                DispatchQueue.main.async(execute: {
+                    self.recgonize = Observation.identifier
+                })
+                
         }
-        
-        
+            
+            
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {return}
-        
+            
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
-        
+            
     }
+ 
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
