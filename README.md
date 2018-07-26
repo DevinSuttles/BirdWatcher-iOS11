@@ -19,6 +19,14 @@ Bird Watcher uses a convolutional neural network trained using the Keras machine
 
 
 
+
+
+
+
+
+
+
+
 # Who is it for?
 Anyone wanting to get outside and learn about nature and birds should use this app!
 
