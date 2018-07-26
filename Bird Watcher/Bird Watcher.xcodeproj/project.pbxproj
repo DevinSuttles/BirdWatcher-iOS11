@@ -67,7 +67,7 @@
 				D19458572109AB4B006385F3 /* bird.txt */,
 				D15265B920D633080074F608 /* ViewController.swift */,
 				D14366F220F8B5D7001D6E5A /* SecondViewController.swift */,
-				D194585621084485006385F3 /* Class */,
+				D194585621084485006385F3 /* Classes */,
 				D15265BB20D633080074F608 /* Main.storyboard */,
 				D15265BE20D6330B0074F608 /* Assets.xcassets */,
 				D15265C020D6330B0074F608 /* LaunchScreen.storyboard */,
@@ -76,12 +76,12 @@
 			path = "Bird Watcher";
 			sourceTree = "<group>";
 		};
-		D194585621084485006385F3 /* Class */ = {
+		D194585621084485006385F3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				D19458542108417E006385F3 /* Bird.swift */,
 			);
-			path = Class;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
