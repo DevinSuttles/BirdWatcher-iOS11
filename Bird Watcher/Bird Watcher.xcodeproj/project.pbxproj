@@ -13,6 +13,8 @@
 		D15265BD20D633080074F608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15265BB20D633080074F608 /* Main.storyboard */; };
 		D15265BF20D6330B0074F608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D15265BE20D6330B0074F608 /* Assets.xcassets */; };
 		D15265C220D6330B0074F608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15265C020D6330B0074F608 /* LaunchScreen.storyboard */; };
+		D19458552108417E006385F3 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19458542108417E006385F3 /* Bird.swift */; };
+		D19458582109AB4B006385F3 /* bird.txt in Resources */ = {isa = PBXBuildFile; fileRef = D19458572109AB4B006385F3 /* bird.txt */; };
 		D1F53D9C2103E167009FFBD8 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D1F53D9B2103E167009FFBD8 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		D15265BE20D6330B0074F608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D15265C120D6330B0074F608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D15265C320D6330B0074F608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D19458542108417E006385F3 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		D19458572109AB4B006385F3 /* bird.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bird.txt; sourceTree = "<group>"; };
 		D1F53D9B2103E167009FFBD8 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,14 +64,24 @@
 			children = (
 				D1F53D9B2103E167009FFBD8 /* Resnet50.mlmodel */,
 				D15265B720D633080074F608 /* AppDelegate.swift */,
+				D19458572109AB4B006385F3 /* bird.txt */,
 				D15265B920D633080074F608 /* ViewController.swift */,
 				D14366F220F8B5D7001D6E5A /* SecondViewController.swift */,
+				D194585621084485006385F3 /* Class */,
 				D15265BB20D633080074F608 /* Main.storyboard */,
 				D15265BE20D6330B0074F608 /* Assets.xcassets */,
 				D15265C020D6330B0074F608 /* LaunchScreen.storyboard */,
 				D15265C320D6330B0074F608 /* Info.plist */,
 			);
 			path = "Bird Watcher";
+			sourceTree = "<group>";
+		};
+		D194585621084485006385F3 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D19458542108417E006385F3 /* Bird.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +145,7 @@
 				D15265C220D6330B0074F608 /* LaunchScreen.storyboard in Resources */,
 				D15265BF20D6330B0074F608 /* Assets.xcassets in Resources */,
 				D15265BD20D633080074F608 /* Main.storyboard in Resources */,
+				D19458582109AB4B006385F3 /* bird.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1F53D9C2103E167009FFBD8 /* Resnet50.mlmodel in Sources */,
+				D19458552108417E006385F3 /* Bird.swift in Sources */,
 				D14366F320F8B5D7001D6E5A /* SecondViewController.swift in Sources */,
 				D15265BA20D633080074F608 /* ViewController.swift in Sources */,
 				D15265B820D633080074F608 /* AppDelegate.swift in Sources */,

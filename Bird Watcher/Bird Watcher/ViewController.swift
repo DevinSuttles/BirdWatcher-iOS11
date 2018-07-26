@@ -70,8 +70,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             
     }
  
-
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let secondView = segue.destination as! SecondViewController
